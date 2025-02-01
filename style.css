@@ -1,5 +1,6 @@
 h1 {
     align-self: auto;
+    text-align: auto;
     margin: 0;
     padding: 20px 0;
     color: darkblue;
@@ -20,7 +21,7 @@ html {
     align-self: auto;
     text-align: auto;
     background-color: #f7eef5;
-    width: 600px;
+    width: auto;
     padding: 50px;
     margin: auto;
 
