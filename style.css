@@ -1,4 +1,5 @@
 h1 {
+    align-self: auto;
     margin: 0;
     padding: 20px 0;
     color: darkblue;
@@ -10,14 +11,14 @@ html {
     font-size: 20px;
     font-family: "mono", sans-serif;
     background-color: skyblue;
-    align-self: center;
+    align-self: auto;
 }
 
 #p1 {
      
     color: deeppink;
     align-self: auto;
-    text-align: center;
+    text-align: auto;
     background-color: #f7eef5;
     width: 600px;
     padding: 50px;
