@@ -1,16 +1,28 @@
 h1 {
     margin: 0;
     padding: 20px 0;
-    color: yellow;
-    text-shadow: 3px 3px 1px black;
+    color: darkblue;
+    text-shadow: 3px 3px 1px cyan;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 html {
     font-size: 20px;
-    font-family: "Open Sans", sans-serif;
+    font-family: "mono", sans-serif;
     background-color: skyblue;
+    align-self: center;
 }
 
+#p1 {
+     
+    color: deeppink;
+    align-self: auto;
+    text-align: center;
+    background-color: #f7eef5;
+    width: 600px;
+    padding: 50px;
+    margin: auto;
+
+}
 body
 }
