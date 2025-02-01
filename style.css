@@ -1,9 +1,9 @@
 h1 {
     margin: 0;
     padding: 20px 0;
-    color: seagreen;
-    text-shadow: 3px 3px 1px black;
-    font-family: "Impact";
+    color: red;
+    text-shadow: 3px 3px 1px yellow;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 html {
@@ -11,6 +11,6 @@ html {
     font-family: "Open Sans", sans-serif;
     background-color: antiquewhite;
 }
- body 
- }
 
+body
+}
