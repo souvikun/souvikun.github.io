@@ -12,6 +12,25 @@
 html{
     background-color: #a86a24 ;
     color: #151c0d;
+
+    background: linear-gradient(-45deg, #fd3d02, #588b8b, #dcdf54, #ff8671);
+        background-size: 400% 400%;
+        animation: gradient 5s ease infinite;
+        height: 100vh;
+    }
+    
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+    
+        50% {
+            background-position: 100% 50%;
+        }
+    
+        100% {
+            background-position: 0% 50%;
+        }
 }
 #travelling{
     background-color: #f1e69a;
