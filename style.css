@@ -24,6 +24,7 @@ html {
     width: auto;
     padding: 50px;
     margin: auto;
+    border: 5px dashed rgb(240, 18, 92);
 
 }
 body
