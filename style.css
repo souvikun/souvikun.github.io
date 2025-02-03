@@ -90,12 +90,7 @@ body
         color: #e8eaeb;
         background-color: #975e64;
 }
-#instagram:visited
-{
-color: #89d0f3;
-    background-color: #080203;
 
-}
 #facebook {
     color: #975e64;
     background-color: #e8eaeb;
@@ -106,11 +101,7 @@ color: #89d0f3;
 color: #e8eaeb;
     background-color: #975e64;
 }
-#facebook:visited {
-    color: #89d0f3;
-    background-color: #080203;
 
-}
 #youtube
  {
     color: #975e64;
@@ -122,11 +113,6 @@ color: #e8eaeb;
 #youtube:hover {
     color: #e8eaeb;
     background-color: #975e64;
-}
-#youtube:visited {
-    color: #89d0f3;
-    background-color: #080203;
-
 }
 
 #github
@@ -141,10 +127,5 @@ color: #e8eaeb;
 #github:hover{
 color: #e8eaeb;
     background-color: #975e64;
-}
-#github:visited {
-    color: #89d0f3;
-    background-color: #080203;
-
 }
 
