@@ -34,10 +34,11 @@ body
     border: 3px inset #b40d8a;
     align-self: center;
     text-align: center;
+    align-items: center;
+    width: 60%;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-
+    justify-content: space-around;
  }
 
 #blogs{
