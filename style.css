@@ -80,6 +80,7 @@ body
     color: whitesmoke;
     background-color: rgb(11, 31, 83);
     font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
 
 }
 #instagram:hover{
@@ -89,7 +90,7 @@ body
     color: whitesmoke;
     background-color: rgb(11, 31, 83);
     font-family: 'Courier New', Courier, monospace;
-
+    font-size: medium;
 }
 #facebook:hover{
     color: deeppink;
@@ -99,6 +100,7 @@ body
     color: whitesmoke;
     background-color: rgb(11, 31, 83);
     font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
  }
 
 #youtube:hover {
@@ -111,6 +113,7 @@ body
     color: whitesmoke;
     background-color: rgb(11, 31, 83);
     font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
 
 
 }
