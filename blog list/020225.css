@@ -19,8 +19,20 @@ html{
     }
     
 html{
-    @media only screen and (max-width: 600px) {
-        width: 65%;
+    @media only screen and (max-width: 600px) 
+    {
+        position: unset ;
+        display: unset ;
+        width: unset;
+        min-height: unset;
+        /* center page with absolute position */
+        top: unset;
+        left: unset;
+        transform: unset;
+        margin: unset;
+        padding: 1%;
+        box-shadow: unset;
+        background: #f1edb6;
         
     }
 }    
