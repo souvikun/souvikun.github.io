@@ -18,7 +18,13 @@ html{
         background: #fffef0;
     }
     
-}
+html{
+    @media only screen and (max-width: 600px) {
+        width: 50%;
+        
+    }
+}    
+    
 
 #flowers{
     position: relative;
