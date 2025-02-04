@@ -112,3 +112,7 @@ html{
     
     
 }
+#warning{
+    font-size: xx-small;
+    font-family: mono;
+}
