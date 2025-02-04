@@ -16,7 +16,6 @@ html{
         padding: 4em;
         box-shadow: 2px 3px 20px black, 0 0 60px #8a4d0f inset;
         background: #fffef0;
-        filter: url(#wavy2);
     }
     
 }
@@ -38,7 +37,7 @@ html{
     text-shadow: 3px 3px 3px rgb(0, 0, 0);
     border: 1px solid black;
     border-radius: 5px;
-    width: 100%;
+    width: 400px;
     height: 250px;
     background-image: url(/images/flowerscale.jpg);
     background-repeat: no-repeat;
@@ -48,6 +47,7 @@ html{
     
     
 }
+
 #quoter{
     font-size: smaller;
     background-color: rgb(226, 104, 196);
@@ -68,6 +68,20 @@ html{
     float: left;
     margin-right: 10px;
 }
+.container{
+@media only screen and (max-width: 600px) {
+        align-items: center;
+        text-align: center;
+        align-self: center;
+        justify-content: left;
+        position: relative;
+        float: none;
+        margin-right: 0px;
+
+    
+}
+}
+
 
 #para1{
     font-family: allerta ;
