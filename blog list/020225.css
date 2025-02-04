@@ -6,7 +6,7 @@ html{
     background-color: antiquewhite;
     position: absolute;
         display: flex;
-        width: 75%;
+        width:75%;
         min-height: calc((1vw + 1vh) * 75);
         /* center page with absolute position */
         top: 0%;
@@ -47,6 +47,12 @@ html{
     
     
 }
+#quote{
+    @media only screen and (max-width: 600px) {
+        width: 300px;
+        
+    }
+}
 
 #quoter{
     font-size: smaller;
@@ -73,7 +79,7 @@ html{
         align-items: center;
         text-align: center;
         align-self: center;
-        justify-content: left;
+        justify-content: center;
         position: relative;
         float: none;
         margin-right: 0px;
