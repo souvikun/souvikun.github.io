@@ -46,6 +46,12 @@ body
     border: 5px groove #d1ac7b;
     width: 50%;
  }
+ .mustard{
+ @media only screen and (max-width: 600px ) {
+
+    width: 400px;
+ }
+}
 
 #blogs{
     color: #36280b;
