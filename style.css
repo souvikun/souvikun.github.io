@@ -42,6 +42,9 @@ body
     flex-direction: row;
     justify-content: space-around;
  }
+ .mustard{
+    border: 5px groove #d1ac7b;
+ }
 
 #blogs{
     color: #36280b;
