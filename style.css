@@ -44,6 +44,7 @@ body
  }
  .mustard{
     border: 5px groove #d1ac7b;
+    width: 50%;
  }
 
 #blogs{
