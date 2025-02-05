@@ -28,7 +28,14 @@ html {
     border: 5px double #434343;
 
 }
-body
+.songbutton{
+    display: flex;
+    justify-content: center;
+}
+#ASong{
+    color: #36280b;
+}
+
 
 .content{
     background-color: #be9a60;

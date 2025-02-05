@@ -28,11 +28,32 @@
         This website is under developement so most things might not work but I hope
         you can enjoy your stay here without much hassle.</div>
     <br>
+    <div class="songbutton">
+    <button id="ASong" onClick="playPause()">
+        <audio src="/audio/02. WHITE SPACE.mp3" autoplay loop></audio>
+        Click Me
+    </button>
+    </div>
     <br>
-        <audio controls autoplay>
-            <source src="/audio/8-bit-retro-game-music-233964.mp3" type="audio/mp3"></audio></center>
+    <script>
+        var aud = document.getElementById("ASong").children[0];
+        var isPlaying = false;
+        aud.pause();
+
+        function playPause() {
+            if (isPlaying) {
+                aud.pause();
+            } else {
+                aud.play();
+            }
+            isPlaying = !isPlaying;
+        }
+    </script>
+
+
     <center><img class="mustard" src="/images/mustardscale.gif" alt="mustard field"></center>
 
+    
     <br>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,
         400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
