@@ -1,61 +1,89 @@
-```html
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>souvikkun — Personal Space</title>
+    <title>souvikkun — Souvik Das</title>
 
     <meta
         name="description"
-        content="The personal website of Souvik Das — thoughts, stories, links and things worth sharing."
+        content="The personal website of Souvik Das — thoughts, projects, experiments and things worth sharing."
     >
 
-    <!-- Favicons -->
-    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <link rel="shortcut icon" href="/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <!-- ONLY stylesheet -->
+    <link rel="stylesheet" href="style.css">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap"
         rel="stylesheet"
     >
 
-    <!-- Main stylesheet -->
-    <link rel="stylesheet" href="style.css">
+    <!-- Prevent theme flash -->
+    <script>
+        (() => {
+            const savedTheme = localStorage.getItem("theme");
+
+            if (savedTheme) {
+                document.documentElement.dataset.theme = savedTheme;
+            } else if (
+                window.matchMedia("(prefers-color-scheme: dark)").matches
+            ) {
+                document.documentElement.dataset.theme = "dark";
+            }
+        })();
+    </script>
 </head>
 
 <body>
 
-    <!-- =========================
-         NAVIGATION
-    ========================== -->
+    <!-- Background -->
+    <div class="background" aria-hidden="true">
+        <div class="background-grid"></div>
+        <div class="noise"></div>
 
-    <header class="nav">
-        <div class="container">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
 
-            <nav class="nav-inner" aria-label="Main navigation">
 
-                <a class="brand" href="/" aria-label="souvikkun home">
-                    <span class="brand-mark">SD</span>
-                    <span>souvikkun</span>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container nav">
+
+            <a href="index.html" class="logo">
+                souvikkun<span>.</span>
+            </a>
+
+            <nav class="nav-links" aria-label="Main navigation">
+                <a href="blogs.html">Blogs</a>
+                <a href="faq.html">FAQ</a>
+                <a href="about.html">About</a>
+            </nav>
+
+            <div class="nav-actions">
+
+                <button
+                    id="themeToggle"
+                    class="theme-toggle"
+                    type="button"
+                    aria-label="Switch to dark mode"
+                    aria-pressed="false"
+                >
+                    <span class="theme-sun">☼</span>
+                    <span class="theme-moon">☾</span>
+                </button>
+
+                <a href="#connect" class="nav-contact">
+                    Let's talk <span>↗</span>
                 </a>
 
-                <div class="nav-links">
-                    <a href="blogs.html">Blogs</a>
-                    <a href="faq.html">FAQ</a>
-                    <a href="about.html">About</a>
-                    <a class="nav-contact" href="#connect">Connect</a>
-                </div>
-
-            </nav>
+            </div>
 
         </div>
     </header>
@@ -63,49 +91,68 @@
 
     <main>
 
-        <!-- =========================
-             HERO
-        ========================== -->
-
+        <!-- Hero -->
         <section class="hero">
+            <div class="container hero-inner">
 
-            <div class="container">
+                <div class="hero-meta">
+                    <span class="status-dot"></span>
+                    <span>
+                        Welcome to my little corner of the internet
+                    </span>
+                </div>
 
-                <div class="hero-content">
+                <h1>
+                    Hello,<br>
+                    I'm <em>Souvik.</em>
+                </h1>
 
-                    <div class="eyebrow">
-                        <span class="eyebrow-dot"></span>
-                        Welcome to my little corner
-                    </div>
-
-                    <h1>
-                        Hello,<br>
-                        I'm <span>Souvik.</span>
-                    </h1>
+                <div class="hero-bottom">
 
                     <p class="hero-description">
-                        This is my personal space on the internet — a place for
-                        thoughts, stories, experiments, links and whatever else
-                        happens to catch my attention.
+                        I make things, write things, break things,
+                        and occasionally figure out how they work.
                     </p>
 
-                    <div class="hero-actions">
-
-                        <a class="button button-primary" href="blogs.html">
-                            Read my blogs
-                            <span>↗</span>
-                        </a>
-
-                        <a class="button button-secondary" href="about.html">
-                            More about me
-                        </a>
-
-                    </div>
+                    <a href="#explore" class="scroll-link">
+                        Scroll to explore
+                        <span>↓</span>
+                    </a>
 
                 </div>
 
-                <div class="hero-decoration" aria-hidden="true">
-                    <span></span>
+            </div>
+        </section>
+
+
+        <!-- Abstract visual -->
+        <section class="abstract-section" aria-hidden="true">
+
+            <div class="container">
+
+                <div class="abstract-card">
+
+                    <div class="abstract-line line-1"></div>
+                    <div class="abstract-line line-2"></div>
+
+                    <div class="abstract-circle circle-1"></div>
+                    <div class="abstract-circle circle-2"></div>
+                    <div class="abstract-circle circle-3"></div>
+
+                    <div class="abstract-square"></div>
+
+                    <div class="abstract-label label-top">
+                        01 — PERSONAL SPACE
+                    </div>
+
+                    <div class="abstract-label label-bottom">
+                        ideas / thoughts / experiments
+                    </div>
+
+                    <div class="abstract-center">
+                        SK
+                    </div>
+
                 </div>
 
             </div>
@@ -113,129 +160,116 @@
         </section>
 
 
-        <!-- =========================
-             EXPLORE
-        ========================== -->
-
-        <section class="section">
+        <!-- Explore -->
+        <section class="explore" id="explore">
 
             <div class="container">
 
                 <div class="section-heading">
 
-                    <div>
-                        <h2>Explore.</h2>
-                    </div>
+                    <span class="section-number">
+                        01
+                    </span>
 
-                    <p>
-                        A few places to start wandering around.
-                        No particular order required.
-                    </p>
+                    <div>
+                        <p class="eyebrow">
+                            Explore
+                        </p>
+
+                        <h2>
+                            A few places<br>
+                            <em>to wander.</em>
+                        </h2>
+                    </div>
 
                 </div>
 
 
                 <div class="cards">
 
-                    <!-- Blogs -->
+                    <a href="blogs.html" class="card card-large">
 
-                    <a class="card" href="blogs.html">
-
-                        <span class="card-arrow">↗</span>
-
-                        <div class="card-icon">
-                            ✎
+                        <div class="card-top">
+                            <span>01</span>
+                            <span>Writing</span>
                         </div>
 
-                        <h3>Blogs</h3>
+                        <div class="card-content">
 
-                        <p>
-                            Thoughts, observations and things I've felt
-                            like putting into words.
-                        </p>
-
-                    </a>
-
-
-                    <!-- FAQ -->
-
-                    <a class="card" href="faq.html">
-
-                        <span class="card-arrow">↗</span>
-
-                        <div class="card-icon">
-                            ?
-                        </div>
-
-                        <h3>FAQ</h3>
-
-                        <p>
-                            Questions you might have. Answers you may
-                            or may not find useful.
-                        </p>
-
-                    </a>
-
-
-                    <!-- About -->
-
-                    <a class="card" href="about.html">
-
-                        <span class="card-arrow">↗</span>
-
-                        <div class="card-icon">
-                            ◎
-                        </div>
-
-                        <h3>About</h3>
-
-                        <p>
-                            A little more context about the person
-                            behind this website.
-                        </p>
-
-                    </a>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             MUSTARD FIELD
-        ========================== -->
-
-        <section class="visual-section">
-
-            <div class="container">
-
-                <div class="visual">
-
-                    <img
-                        src="/images/mustardscale.gif"
-                        alt="Mustard field"
-                        loading="lazy"
-                    >
-
-                    <div class="visual-overlay">
-
-                        <div class="visual-copy">
-
-                            <small>A small piece of home</small>
-
-                            <h2>Stay a while.</h2>
+                            <h3>
+                                Things I've<br>
+                                thought about.
+                            </h3>
 
                             <p>
-                                The website is always a work in progress.
-                                Things may change, break, disappear and
-                                occasionally come back better.
+                                Random thoughts, observations,
+                                stories and things that don't fit
+                                anywhere else.
                             </p>
 
                         </div>
 
-                    </div>
+                        <div class="card-arrow">
+                            ↗
+                        </div>
+
+                    </a>
+
+
+                    <a href="about.html" class="card">
+
+                        <div class="card-top">
+                            <span>02</span>
+                            <span>About</span>
+                        </div>
+
+                        <div class="card-content">
+
+                            <h3>
+                                A little<br>
+                                about me.
+                            </h3>
+
+                            <p>
+                                Who I am, what I do,
+                                and why this website exists.
+                            </p>
+
+                        </div>
+
+                        <div class="card-arrow">
+                            ↗
+                        </div>
+
+                    </a>
+
+
+                    <a href="faq.html" class="card">
+
+                        <div class="card-top">
+                            <span>03</span>
+                            <span>FAQ</span>
+                        </div>
+
+                        <div class="card-content">
+
+                            <h3>
+                                Questions?<br>
+                                Start here.
+                            </h3>
+
+                            <p>
+                                Some answers to questions
+                                you might already have.
+                            </p>
+
+                        </div>
+
+                        <div class="card-arrow">
+                            ↗
+                        </div>
+
+                    </a>
 
                 </div>
 
@@ -244,70 +278,82 @@
         </section>
 
 
-        <!-- =========================
-             SOCIAL / CONNECT
-        ========================== -->
+        <!-- Statement -->
+        <section class="statement">
 
+            <div class="container">
+
+                <p class="eyebrow">
+                    02 — A small statement
+                </p>
+
+                <h2>
+                    The internet is more interesting
+                    when it feels like a <em>place</em>,
+                    not just a profile.
+                </h2>
+
+            </div>
+
+        </section>
+
+
+        <!-- Connect -->
         <section class="connect" id="connect">
 
             <div class="container">
 
-                <div class="connect-box">
+                <div class="connect-inner">
 
-                    <div class="connect-copy">
+                    <div>
 
-                        <small>Elsewhere on the internet</small>
+                        <p class="eyebrow">
+                            03 — Find me elsewhere
+                        </p>
 
                         <h2>
-                            Let's keep in touch.
+                            Say <em>hello.</em>
                         </h2>
 
                     </div>
 
 
-                    <div class="socials">
+                    <div class="social-links">
 
                         <a
-                            class="social"
                             href="https://www.instagram.com/souvikkun/"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
                             <span>Instagram</span>
-                            <span class="social-arrow">↗</span>
+                            <span>↗</span>
                         </a>
 
-
                         <a
-                            class="social"
                             href="https://www.facebook.com/share/19tgPLvUYk/"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
                             <span>Facebook</span>
-                            <span class="social-arrow">↗</span>
+                            <span>↗</span>
                         </a>
 
-
                         <a
-                            class="social"
                             href="https://www.youtube.com/@Souvikun"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
                             <span>YouTube</span>
-                            <span class="social-arrow">↗</span>
+                            <span>↗</span>
                         </a>
 
-
                         <a
-                            class="social"
                             href="https://github.com/souvikun"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
                             <span>GitHub</span>
-                            <span class="social-arrow">↗</span>
+                            <span>↗</span>
                         </a>
 
                     </div>
@@ -321,30 +367,68 @@
     </main>
 
 
-    <!-- =========================
-         FOOTER
-    ========================== -->
+    <!-- Footer -->
+    <footer class="site-footer">
 
-    <footer>
+        <div class="container footer-inner">
 
-        <div class="container">
+            <span>
+                © 2026 Souvik Das
+            </span>
 
-            <div class="footer-inner">
+            <span class="footer-center">
+                made with curiosity
+            </span>
 
-                <span>
-                    © 2026 <strong>Souvik Das</strong>
-                </span>
-
-                <span>
-                    Made somewhere on the internet.
-                </span>
-
-            </div>
+            <a href="index.html">
+                back to top ↑
+            </a>
 
         </div>
 
     </footer>
 
+
+    <!-- Theme toggle -->
+    <script>
+        const root = document.documentElement;
+        const toggle = document.getElementById("themeToggle");
+
+        function updateThemeButton() {
+            const darkMode = root.dataset.theme === "dark";
+
+            toggle.setAttribute(
+                "aria-pressed",
+                darkMode
+            );
+
+            toggle.setAttribute(
+                "aria-label",
+                darkMode
+                    ? "Switch to light mode"
+                    : "Switch to dark mode"
+            );
+        }
+
+        toggle.addEventListener("click", () => {
+
+            const newTheme =
+                root.dataset.theme === "dark"
+                    ? "light"
+                    : "dark";
+
+            root.dataset.theme = newTheme;
+
+            localStorage.setItem(
+                "theme",
+                newTheme
+            );
+
+            updateThemeButton();
+        });
+
+        updateThemeButton();
+    </script>
+
 </body>
 </html>
-```

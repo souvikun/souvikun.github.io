@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Blogs — souvikkun</title>
+
+    <meta
+        name="description"
+        content="Notes, engineering experiments, observations and ideas by Souvik Das."
+    >
+
+    <link rel="stylesheet" href="blogs.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap"
+        rel="stylesheet"
+    >
+
+    <script>
+        (() => {
+            const savedTheme = localStorage.getItem("theme");
+
+            if (savedTheme === "light" || savedTheme === "dark") {
+                document.documentElement.dataset.theme = savedTheme;
+            } else if (
+                window.matchMedia &&
+                window.matchMedia("(prefers-color-scheme: dark)").matches
+            ) {
+                document.documentElement.dataset.theme = "dark";
+            }
+        })();
+    </script>
+</head>
+
+
+<body>
+
+    <!-- ==============================================
+         BACKGROUND
+    =============================================== -->
+
+    <div class="blog-background" aria-hidden="true">
+
+        <div class="blog-grid"></div>
+
+        <div class="blog-glow glow-one"></div>
+        <div class="blog-glow glow-two"></div>
+
+    </div>
+
+
+    <!-- ==============================================
+         HEADER
+    =============================================== -->
+
+    <header class="blog-header">
+
+        <div class="blog-container blog-nav">
+
+            <a
+                href="index.html"
+                class="blog-logo"
+            >
+                souvikkun<span>.</span>
+            </a>
+
+
+            <div class="blog-nav-right">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <button
+                    class="blog-theme-toggle"
+                    id="themeToggle"
+                    type="button"
+                    aria-label="Switch to dark mode"
+                    aria-pressed="false"
+                >
+                    <span class="sun">☼</span>
+                    <span class="moon">☾</span>
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- ==============================================
+             BLOG HERO
+        =============================================== -->
+
+        <section class="blog-hero">
+
+            <div class="blog-container">
+
+                <div class="blog-hero-meta">
+
+                    <span>
+                        NOTEBOOK / 000
+                    </span>
+
+                    <span>
+                        SIGNALS ONLINE
+                    </span>
+
+                </div>
+
+
+                <h1>
+                    Things
+                    <br>
+                    I've
+                    <em>written.</em>
+                </h1>
+
+
+                <div class="blog-intro">
+
+                    <p>
+                        Engineering notes, strange observations,
+                        experiments, half-formed ideas and things
+                        worth remembering.
+                    </p>
+
+                    <div class="blog-counter">
+
+                        <strong id="postCount">
+                            03
+                        </strong>
+
+                        <span>
+                            entries
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================================
+             BLOG INDEX
+        =============================================== -->
+
+        <section class="blog-index">
+
+            <div class="blog-container">
+
+
+                <!-- ==========================================
+                     POST 001
+                =========================================== -->
+
+                <article
+                    class="post"
+                    id="engineering-notes"
+                >
+
+                    <div class="post-number">
+                        001
+                    </div>
+
+
+                    <div class="post-main">
+
+                        <div class="post-meta">
+
+                            <span>
+                                ENGINEERING
+                            </span>
+
+                            <span>
+                                FIELD NOTES / 001
+                            </span>
+
+                        </div>
+
+
+                        <h2>
+                            Thinking in
+                            <em>circuits.</em>
+                        </h2>
+
+
+                        <p class="post-excerpt">
+                            There is something satisfying about
+                            reducing a complicated problem to a few
+                            blocks, connections and measurable signals.
+                        </p>
+
+
+                        <div class="post-bottom">
+
+                            <span>
+                                06 MIN READ
+                            </span>
+
+                            <span>
+                                SEP 2026
+                            </span>
+
+                        </div>
+
+
+                        <!-- Expand button -->
+
+                        <button
+                            class="read-button"
+                            type="button"
+                            aria-expanded="false"
+                            aria-controls="article-001"
+                        >
+                            <span class="button-label">
+                                Read article
+                            </span>
+
+                            <span class="button-icon">
+                                +
+                            </span>
+                        </button>
+
+
+                        <!-- Full article -->
+
+                        <div
+                            class="article-content"
+                            id="article-001"
+                            hidden
+                        >
+
+                            <p>
+                                Engineering often begins with a
+                                deceptively simple question:
+                                <strong>what is actually happening here?</strong>
+                            </p>
+
+                            <p>
+                                A circuit diagram gives us a useful way
+                                to answer that question. Instead of
+                                looking at an entire system as one
+                                overwhelming object, we can split it
+                                into sources, components, paths and
+                                outputs.
+                            </p>
+
+                            <p>
+                                A resistor limits current. A capacitor
+                                stores energy. An inductor resists
+                                changes in current. A transistor can
+                                become a switch or an amplifier.
+                                Suddenly a complicated machine becomes
+                                a collection of understandable pieces.
+                            </p>
+
+                            <div class="article-equation">
+                                V = I × R
+                            </div>
+
+                            <p>
+                                The interesting part is that these
+                                relationships are not merely
+                                mathematical abstractions. They describe
+                                physical behavior. The equation becomes
+                                useful when we can measure something,
+                                change something, and observe the result.
+                            </p>
+
+                            <p>
+                                That is probably what I enjoy most about
+                                electrical engineering: the loop between
+                                theory and reality. You calculate
+                                something on paper, build it, measure it,
+                                discover that your assumptions were
+                                slightly wrong, and then try again.
+                            </p>
+
+                            <p>
+                                <strong>
+                                    Build. Measure. Debug. Repeat.
+                                </strong>
+                            </p>
+
+                            <div class="article-tags">
+
+                                <span>
+                                    CIRCUITS
+                                </span>
+
+                                <span>
+                                    ENGINEERING
+                                </span>
+
+                                <span>
+                                    SYSTEMS
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="post-visual circuit-mini">
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ==========================================
+                     POST 002
+                =========================================== -->
+
+                <article
+                    class="post"
+                    id="signal-noise"
+                >
+
+                    <div class="post-number">
+                        002
+                    </div>
+
+
+                    <div class="post-main">
+
+                        <div class="post-meta">
+
+                            <span>
+                                SIGNALS
+                            </span>
+
+                            <span>
+                                FIELD NOTES / 002
+                            </span>
+
+                        </div>
+
+
+                        <h2>
+                            Signal,
+                            <em>noise</em>
+                            & everything between.
+                        </h2>
+
+
+                        <p class="post-excerpt">
+                            Information becomes interesting when
+                            something interferes with it. A small
+                            meditation on useful patterns and noise.
+                        </p>
+
+
+                        <div class="post-bottom">
+
+                            <span>
+                                04 MIN READ
+                            </span>
+
+                            <span>
+                                SEP 2026
+                            </span>
+
+                        </div>
+
+
+                        <button
+                            class="read-button"
+                            type="button"
+                            aria-expanded="false"
+                            aria-controls="article-002"
+                        >
+                            <span class="button-label">
+                                Read article
+                            </span>
+
+                            <span class="button-icon">
+                                +
+                            </span>
+                        </button>
+
+
+                        <div
+                            class="article-content"
+                            id="article-002"
+                            hidden
+                        >
+
+                            <p>
+                                A signal is useful because it carries
+                                information. But every real system has
+                                something else riding along with it.
+                            </p>
+
+                            <p>
+                                Thermal effects, electromagnetic
+                                interference, imperfect components and
+                                limitations in measurement all introduce
+                                noise.
+                            </p>
+
+                            <div class="article-equation">
+                                SNR = P(signal) / P(noise)
+                            </div>
+
+                            <p>
+                                The challenge is not necessarily to
+                                eliminate every unwanted component.
+                                Sometimes that is impossible. The more
+                                useful question is:
+                                <strong>
+                                    can we distinguish what matters?
+                                </strong>
+                            </p>
+
+                            <p>
+                                Filters are one answer. Averaging is
+                                another. Better sensors help. Better
+                                shielding helps. But there is also a
+                                conceptual lesson here: useful
+                                information is often surrounded by
+                                irrelevant information.
+                            </p>
+
+                            <p>
+                                Learning to separate the two is useful
+                                far beyond electrical engineering.
+                            </p>
+
+                            <div class="article-tags">
+
+                                <span>
+                                    SIGNALS
+                                </span>
+
+                                <span>
+                                    NOISE
+                                </span>
+
+                                <span>
+                                    FILTERING
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="post-visual waveform-mini">
+
+                        <div class="wave">
+
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ==========================================
+                     POST 003
+                =========================================== -->
+
+                <article
+                    class="post"
+                    id="why-build"
+                >
+
+                    <div class="post-number">
+                        003
+                    </div>
+
+
+                    <div class="post-main">
+
+                        <div class="post-meta">
+
+                            <span>
+                                PERSONAL
+                            </span>
+
+                            <span>
+                                FIELD NOTES / 003
+                            </span>
+
+                        </div>
+
+
+                        <h2>
+                            Why
+                            <em>build</em>
+                            anything?
+                        </h2>
+
+
+                        <p class="post-excerpt">
+                            Because sometimes the best way to
+                            understand something is to take it apart
+                            and make your own version from scratch.
+                        </p>
+
+
+                        <div class="post-bottom">
+
+                            <span>
+                                03 MIN READ
+                            </span>
+
+                            <span>
+                                SEP 2026
+                            </span>
+
+                        </div>
+
+
+                        <button
+                            class="read-button"
+                            type="button"
+                            aria-expanded="false"
+                            aria-controls="article-003"
+                        >
+                            <span class="button-label">
+                                Read article
+                            </span>
+
+                            <span class="button-icon">
+                                +
+                            </span>
+                        </button>
+
+
+                        <div
+                            class="article-content"
+                            id="article-003"
+                            hidden
+                        >
+
+                            <p>
+                                There is a strange satisfaction in
+                                creating a working version of something
+                                that already exists.
+                            </p>
+
+                            <p>
+                                You could simply use the finished tool,
+                                but building your own version forces you
+                                to understand the decisions hiding
+                                underneath the interface.
+                            </p>
+
+                            <p>
+                                You start asking different questions.
+                                Why does this component exist? Why is
+                                this value chosen? What happens when I
+                                change it?
+                            </p>
+
+                            <p>
+                                Not everything needs to become a serious
+                                project. Sometimes the value is simply
+                                learning something that you could not
+                                have understood by reading about it.
+                            </p>
+
+                            <p>
+                                Make the tiny version. Break it.
+                                Fix it. Then make it stranger.
+                            </p>
+
+                            <div class="article-tags">
+
+                                <span>
+                                    MAKING
+                                </span>
+
+                                <span>
+                                    LEARNING
+                                </span>
+
+                                <span>
+                                    EXPERIMENTS
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="post-visual coordinate-mini">
+
+                        <span class="crosshair"></span>
+
+                        <span class="coord coord-a">
+                            x: 04
+                        </span>
+
+                        <span class="coord coord-b">
+                            y: 17
+                        </span>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================================
+             END
+        =============================================== -->
+
+        <section class="blog-end">
+
+            <div class="blog-container">
+
+                <p>
+                    More experiments are coming.
+                </p>
+
+                <a href="index.html">
+                    Return home ↗
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==============================================
+         FOOTER
+    =============================================== -->
+
+    <footer class="blog-footer">
+
+        <div class="blog-container">
+
+            <span>
+                © 2026 Souvik Das
+            </span>
+
+            <span>
+                souvikkun
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ==============================================
+         JAVASCRIPT
+    =============================================== -->
+
+    <script>
+
+        /* ----------------------------------------------
+           THEME
+        ---------------------------------------------- */
+
+        const root =
+            document.documentElement;
+
+        const themeToggle =
+            document.getElementById(
+                "themeToggle"
+            );
+
+
+        function updateThemeButton() {
+
+            const isDark =
+                root.dataset.theme === "dark";
+
+            themeToggle.setAttribute(
+                "aria-pressed",
+                String(isDark)
+            );
+
+            themeToggle.setAttribute(
+                "aria-label",
+                isDark
+                    ? "Switch to light mode"
+                    : "Switch to dark mode"
+            );
+        }
+
+
+        themeToggle.addEventListener(
+            "click",
+            () => {
+
+                const nextTheme =
+                    root.dataset.theme === "dark"
+                        ? "light"
+                        : "dark";
+
+                root.dataset.theme =
+                    nextTheme;
+
+                localStorage.setItem(
+                    "theme",
+                    nextTheme
+                );
+
+                updateThemeButton();
+
+            }
+        );
+
+
+        updateThemeButton();
+
+
+        /* ----------------------------------------------
+           EXPANDABLE ARTICLES
+        ---------------------------------------------- */
+
+        const readButtons =
+            document.querySelectorAll(
+                ".read-button"
+            );
+
+
+        readButtons.forEach(button => {
+
+            button.addEventListener(
+                "click",
+                () => {
+
+                    const targetId =
+                        button.getAttribute(
+                            "aria-controls"
+                        );
+
+                    const article =
+                        document.getElementById(
+                            targetId
+                        );
+
+                    const isOpen =
+                        button.getAttribute(
+                            "aria-expanded"
+                        ) === "true";
+
+
+                    /* Close */
+
+                    if (isOpen) {
+
+                        article.classList.remove(
+                            "is-open"
+                        );
+
+                        button.setAttribute(
+                            "aria-expanded",
+                            "false"
+                        );
+
+                        button
+                            .querySelector(
+                                ".button-label"
+                            )
+                            .textContent =
+                            "Read article";
+
+                        button
+                            .querySelector(
+                                ".button-icon"
+                            )
+                            .textContent =
+                            "+";
+
+                        setTimeout(
+                            () => {
+                                article.hidden = true;
+                            },
+                            450
+                        );
+
+                        return;
+                    }
+
+
+                    /* Open */
+
+                    article.hidden = false;
+
+                    requestAnimationFrame(() => {
+
+                        article.classList.add(
+                            "is-open"
+                        );
+
+                    });
+
+
+                    button.setAttribute(
+                        "aria-expanded",
+                        "true"
+                    );
+
+                    button
+                        .querySelector(
+                            ".button-label"
+                        )
+                        .textContent =
+                        "Close article";
+
+                    button
+                        .querySelector(
+                            ".button-icon"
+                        )
+                        .textContent =
+                        "−";
+
+
+                    /* Scroll */
+
+                    setTimeout(() => {
+
+                        const buttonTop =
+                            button.getBoundingClientRect().top
+                            + window.scrollY;
+
+                        const offset = 100;
+
+                        window.scrollTo({
+                            top:
+                                buttonTop - offset,
+                            behavior:
+                                "smooth"
+                        });
+
+                    }, 120);
+
+                }
+            );
+
+        });
+
+
+        /* ----------------------------------------------
+           OPEN ARTICLE FROM HASH
+           ---------------------------------------------- */
+
+        function openFromHash() {
+
+            const hash =
+                window.location.hash;
+
+            if (!hash) return;
+
+            const target =
+                document.querySelector(hash);
+
+            if (
+                !target ||
+                !target.classList.contains("post")
+            ) {
+                return;
+            }
+
+            const button =
+                target.querySelector(
+                    ".read-button"
+                );
+
+            if (button) {
+                button.click();
+            }
+
+        }
+
+
+        window.addEventListener(
+            "load",
+            openFromHash
+        );
+
+    </script>
+
+</body>
+
+</html>
