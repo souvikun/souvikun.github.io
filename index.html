@@ -1,66 +1,1032 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>souvikkun</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" >
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" >
-    <link rel="shortcut icon" href="/favicon.ico" >
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" >
-    <link rel="manifest" href="/site.webmanifest" >
+
+    <title>souvikkun — Personal Space</title>
+    <meta
+        name="description"
+        content="The personal website of Souvik Das — thoughts, stories, links and things worth sharing."
+    >
+
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+        :root {
+            --bg: #f7f6f2;
+            --surface: rgba(255, 255, 255, 0.72);
+            --surface-solid: #ffffff;
+            --text: #171714;
+            --muted: #77766f;
+            --border: rgba(23, 23, 20, 0.09);
+
+            --accent: #c8a52b;
+            --accent-dark: #8c7316;
+            --accent-soft: #eee3ae;
+
+            --radius-lg: 28px;
+            --radius-md: 18px;
+
+            --shadow:
+                0 20px 60px rgba(25, 25, 20, 0.08);
+
+            --max-width: 1120px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            min-height: 100vh;
+            color: var(--text);
+            background:
+                radial-gradient(
+                    circle at 10% 0%,
+                    rgba(200, 165, 43, 0.13),
+                    transparent 32%
+                ),
+                radial-gradient(
+                    circle at 90% 15%,
+                    rgba(200, 165, 43, 0.09),
+                    transparent 30%
+                ),
+                var(--bg);
+            font-family: "DM Sans", sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            opacity: 0.035;
+            background-image:
+                url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.45'/%3E%3C/svg%3E");
+            z-index: 999;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(calc(100% - 40px), var(--max-width));
+            margin-inline: auto;
+        }
+
+        /* -------------------------
+           NAVIGATION
+        ------------------------- */
+
+        .nav {
+            position: relative;
+            z-index: 10;
+            padding: 28px 0;
+        }
+
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 13px 15px 13px 20px;
+
+            background: rgba(255, 255, 255, 0.58);
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+
+            box-shadow: 0 8px 30px rgba(20, 20, 15, 0.04);
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        .brand-mark {
+            display: grid;
+            width: 34px;
+            height: 34px;
+            place-items: center;
+
+            color: #fff;
+            background: var(--text);
+            border-radius: 50%;
+
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .nav-links a {
+            padding: 8px 14px;
+            color: var(--muted);
+            border-radius: 999px;
+            font-size: 13px;
+            font-weight: 600;
+            transition:
+                color 0.2s ease,
+                background 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--text);
+            background: rgba(23, 23, 20, 0.06);
+        }
+
+        .nav-contact {
+            color: #fff !important;
+            background: var(--text) !important;
+        }
+
+        .nav-contact:hover {
+            color: #fff !important;
+            background: #33332e !important;
+        }
+
+        /* -------------------------
+           HERO
+        ------------------------- */
+
+        .hero {
+            position: relative;
+            min-height: 650px;
+            display: grid;
+            align-items: center;
+            padding: 90px 0 110px;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 790px;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+
+            margin-bottom: 25px;
+            padding: 8px 13px;
+
+            color: var(--accent-dark);
+            background: rgba(200, 165, 43, 0.11);
+            border: 1px solid rgba(200, 165, 43, 0.18);
+            border-radius: 999px;
+
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        .eyebrow-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: var(--accent);
+            box-shadow: 0 0 0 5px rgba(200, 165, 43, 0.12);
+        }
+
+        .hero h1 {
+            max-width: 850px;
+            margin-bottom: 27px;
+
+            font-family: "Playfair Display", serif;
+            font-size: clamp(58px, 9vw, 112px);
+            line-height: 0.94;
+            letter-spacing: -0.065em;
+            font-weight: 700;
+        }
+
+        .hero h1 span {
+            position: relative;
+            display: inline-block;
+            font-style: italic;
+        }
+
+        .hero h1 span::after {
+            content: "";
+            position: absolute;
+            left: 3%;
+            right: 3%;
+            bottom: -2px;
+            height: 7px;
+
+            background: var(--accent);
+            border-radius: 999px;
+            transform: rotate(-1.5deg);
+            opacity: 0.72;
+            z-index: -1;
+        }
+
+        .hero-description {
+            max-width: 610px;
+            margin-bottom: 38px;
+
+            color: var(--muted);
+            font-size: clamp(17px, 2vw, 20px);
+            line-height: 1.7;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+
+            min-height: 48px;
+            padding: 0 20px;
+
+            border: 1px solid transparent;
+            border-radius: 999px;
+
+            font-size: 14px;
+            font-weight: 700;
+
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease,
+                background 0.2s ease;
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+        }
+
+        .button-primary {
+            color: #fff;
+            background: var(--text);
+            box-shadow: 0 10px 25px rgba(23, 23, 20, 0.14);
+        }
+
+        .button-primary:hover {
+            background: #33332e;
+            box-shadow: 0 14px 30px rgba(23, 23, 20, 0.18);
+        }
+
+        .button-secondary {
+            color: var(--text);
+            background: rgba(255, 255, 255, 0.62);
+            border-color: var(--border);
+        }
+
+        .button-secondary:hover {
+            background: #fff;
+        }
+
+        .hero-decoration {
+            position: absolute;
+            top: 50%;
+            right: -70px;
+
+            width: 330px;
+            height: 330px;
+
+            border: 1px solid rgba(200, 165, 43, 0.22);
+            border-radius: 50%;
+
+            transform: translateY(-50%);
+            opacity: 0.7;
+        }
+
+        .hero-decoration::before,
+        .hero-decoration::after {
+            content: "";
+            position: absolute;
+            border: 1px solid rgba(200, 165, 43, 0.16);
+            border-radius: 50%;
+        }
+
+        .hero-decoration::before {
+            inset: 35px;
+        }
+
+        .hero-decoration::after {
+            inset: 80px;
+        }
+
+        .hero-decoration span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+            width: 14px;
+            height: 14px;
+
+            background: var(--accent);
+            border-radius: 50%;
+
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 0 15px rgba(200, 165, 43, 0.08);
+        }
+
+        /* -------------------------
+           FEATURE CARDS
+        ------------------------- */
+
+        .section {
+            padding: 35px 0 100px;
+        }
+
+        .section-heading {
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+            gap: 30px;
+            margin-bottom: 25px;
+        }
+
+        .section-heading h2 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(32px, 5vw, 48px);
+            line-height: 1;
+            letter-spacing: -0.045em;
+        }
+
+        .section-heading p {
+            max-width: 360px;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .card {
+            position: relative;
+            min-height: 230px;
+            padding: 27px;
+
+            overflow: hidden;
+
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+
+            box-shadow: var(--shadow);
+
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 70px rgba(25, 25, 20, 0.11);
+        }
+
+        .card-icon {
+            display: grid;
+            width: 44px;
+            height: 44px;
+            place-items: center;
+            margin-bottom: 42px;
+
+            background: rgba(200, 165, 43, 0.12);
+            border-radius: 14px;
+
+            font-size: 18px;
+        }
+
+        .card h3 {
+            margin-bottom: 7px;
+            font-size: 20px;
+            letter-spacing: -0.03em;
+        }
+
+        .card p {
+            max-width: 270px;
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        .card-arrow {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+
+            font-size: 20px;
+            opacity: 0.45;
+
+            transition:
+                transform 0.2s ease,
+                opacity 0.2s ease;
+        }
+
+        .card:hover .card-arrow {
+            opacity: 1;
+            transform: translate(3px, -3px);
+        }
+
+        /* -------------------------
+           MUSTARD IMAGE
+        ------------------------- */
+
+        .visual-section {
+            padding: 0 0 100px;
+        }
+
+        .visual {
+            position: relative;
+            min-height: 430px;
+            overflow: hidden;
+
+            border-radius: 34px;
+            background: #d4b52d;
+            box-shadow: var(--shadow);
+        }
+
+        .visual img {
+            display: block;
+            width: 100%;
+            height: 430px;
+            object-fit: cover;
+        }
+
+        .visual-overlay {
+            position: absolute;
+            inset: 0;
+
+            display: flex;
+            align-items: end;
+
+            padding: 35px;
+
+            background:
+                linear-gradient(
+                    to top,
+                    rgba(15, 15, 10, 0.62),
+                    rgba(15, 15, 10, 0.04) 65%
+                );
+        }
+
+        .visual-copy {
+            max-width: 520px;
+            color: #fff;
+        }
+
+        .visual-copy small {
+            display: block;
+            margin-bottom: 7px;
+            opacity: 0.72;
+
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .visual-copy h2 {
+            margin-bottom: 7px;
+
+            font-family: "Playfair Display", serif;
+            font-size: clamp(32px, 5vw, 52px);
+            line-height: 1;
+            letter-spacing: -0.04em;
+        }
+
+        .visual-copy p {
+            max-width: 470px;
+            opacity: 0.82;
+            font-size: 14px;
+        }
+
+        /* -------------------------
+           CONNECT
+        ------------------------- */
+
+        .connect {
+            padding: 0 0 100px;
+        }
+
+        .connect-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+
+            padding: 45px;
+
+            background: var(--text);
+            color: #fff;
+            border-radius: var(--radius-lg);
+
+            box-shadow: 0 25px 70px rgba(23, 23, 20, 0.15);
+        }
+
+        .connect-copy small {
+            display: block;
+            margin-bottom: 12px;
+
+            color: var(--accent-soft);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        .connect-copy h2 {
+            max-width: 430px;
+            font-family: "Playfair Display", serif;
+            font-size: clamp(35px, 5vw, 53px);
+            line-height: 1;
+            letter-spacing: -0.045em;
+        }
+
+        .socials {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 9px;
+        }
+
+        .social {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 16px 17px;
+
+            color: rgba(255, 255, 255, 0.76);
+            background: rgba(255, 255, 255, 0.065);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 13px;
+
+            font-size: 13px;
+            font-weight: 600;
+
+            transition:
+                background 0.2s ease,
+                color 0.2s ease,
+                transform 0.2s ease;
+        }
+
+        .social:hover {
+            color: #fff;
+            background: rgba(255, 255, 255, 0.12);
+            transform: translateY(-2px);
+        }
+
+        .social-arrow {
+            opacity: 0.45;
+        }
+
+        /* -------------------------
+           FOOTER
+        ------------------------- */
+
+        footer {
+            padding: 0 0 30px;
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+
+            padding-top: 25px;
+            border-top: 1px solid var(--border);
+
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+        .footer-inner strong {
+            color: var(--text);
+        }
+
+        /* -------------------------
+           RESPONSIVE
+        ------------------------- */
+
+        @media (max-width: 850px) {
+            .hero {
+                min-height: auto;
+                padding: 80px 0 90px;
+            }
+
+            .hero-decoration {
+                right: -180px;
+                opacity: 0.4;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .card {
+                min-height: 200px;
+            }
+
+            .connect-box {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+        }
+
+        @media (max-width: 620px) {
+            .container {
+                width: min(calc(100% - 28px), var(--max-width));
+            }
+
+            .nav {
+                padding-top: 14px;
+            }
+
+            .nav-inner {
+                padding-left: 12px;
+            }
+
+            .nav-links a:not(.nav-contact) {
+                display: none;
+            }
+
+            .nav-links {
+                gap: 0;
+            }
+
+            .nav-contact {
+                padding-inline: 14px !important;
+            }
+
+            .hero {
+                padding: 65px 0 80px;
+            }
+
+            .hero h1 {
+                font-size: clamp(54px, 17vw, 88px);
+            }
+
+            .hero-description {
+                font-size: 16px;
+            }
+
+            .hero-actions {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .button {
+                width: 100%;
+            }
+
+            .section {
+                padding-bottom: 75px;
+            }
+
+            .section-heading {
+                display: block;
+            }
+
+            .section-heading p {
+                margin-top: 13px;
+            }
+
+            .visual-section {
+                padding-bottom: 75px;
+            }
+
+            .visual,
+            .visual img {
+                min-height: 390px;
+                height: 390px;
+            }
+
+            .visual-overlay {
+                padding: 25px;
+            }
+
+            .connect {
+                padding-bottom: 75px;
+            }
+
+            .connect-box {
+                padding: 30px 23px;
+            }
+
+            .socials {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-inner {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                transition-duration: 0.01ms !important;
+                animation-duration: 0.01ms !important;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <h1>
-        <center>WELCOME</center>
-    </h1>
-        <div class="content">
-            <div><a id="blogs" href="blogs.html">Blogs</a></div>
-            <div><a id="faq" href="faq.html">FAQ</a></div>
-            <div><a id="email" href="about.html">About</a></div>
+
+    <!-- Navigation -->
+    <header class="nav">
+        <div class="container">
+            <nav class="nav-inner" aria-label="Main navigation">
+
+                <a class="brand" href="/" aria-label="souvikkun home">
+                    <span class="brand-mark">SD</span>
+                    <span>souvikkun</span>
+                </a>
+
+                <div class="nav-links">
+                    <a href="blogs.html">Blogs</a>
+                    <a href="faq.html">FAQ</a>
+                    <a href="about.html">About</a>
+                    <a class="nav-contact" href="#connect">Connect</a>
+                </div>
+
+            </nav>
         </div>
-    <br>
-    <div id="p1">You are at the homepage of my website, You may navigate yourself to
-        my social media handles by clicking the links below or check out my blogs.
-        This website is under developement so most things might not work but I hope
-        you can enjoy your stay here without much hassle.</div>
-    <br>
-    <script>
-        var aud = document.getElementById("ASong").children[0];
-        var isPlaying = false;
-        aud.pause();
-
-        function playPause() {
-            if (isPlaying) {
-                aud.pause();
-            } else {
-                aud.play();
-            }
-            isPlaying = !isPlaying;
-        }
-    </script>
+    </header>
 
 
-    <center><img class="mustard" src="/images/mustardscale.gif" alt="mustard field"></center>
+    <main>
 
-    
-    <br>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,
-        400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
+        <!-- Hero -->
+        <section class="hero">
+            <div class="container">
 
-        <div id="connectme">
-       <h4 style="color: #434343; font-family: kanit;"> -CONNECT WITH ME-</h4>
-       <p> <a id="instagram" href="https://www.instagram.com/souvikkun/">[Instagram]</a>
-       <p> <a id="facebook" href="https://www.facebook.com/share/19tgPLvUYk/">[facebook]</a>
-       <p> <a id="youtube" href="https://www.youtube.com/@Souvikun">[YouTube]</a>
-       <p> <a id="github" href="https://github.com/souvikun">[GitHub]</a> </p>
-    </div>
+                <div class="hero-content">
+
+                    <div class="eyebrow">
+                        <span class="eyebrow-dot"></span>
+                        Welcome to my little corner
+                    </div>
+
+                    <h1>
+                        Hello,<br>
+                        I'm <span>Souvik.</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        This is my personal space on the internet — a place for
+                        thoughts, stories, experiments, links and whatever else
+                        happens to catch my attention.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="blogs.html">
+                            Read my blogs
+                            <span>↗</span>
+                        </a>
+
+                        <a class="button button-secondary" href="about.html">
+                            More about me
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="hero-decoration" aria-hidden="true">
+                    <span></span>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- Explore -->
+        <section class="section">
+            <div class="container">
+
+                <div class="section-heading">
+                    <div>
+                        <h2>Explore.</h2>
+                    </div>
+
+                    <p>
+                        A few places to start wandering around.
+                        No particular order required.
+                    </p>
+                </div>
+
+                <div class="cards">
+
+                    <a class="card" href="blogs.html">
+                        <span class="card-arrow">↗</span>
+
+                        <div class="card-icon">✎</div>
+
+                        <h3>Blogs</h3>
+
+                        <p>
+                            Thoughts, observations and things I've felt
+                            like putting into words.
+                        </p>
+                    </a>
+
+
+                    <a class="card" href="faq.html">
+                        <span class="card-arrow">↗</span>
+
+                        <div class="card-icon">?</div>
+
+                        <h3>FAQ</h3>
+
+                        <p>
+                            Questions you might have. Answers you may
+                            or may not find useful.
+                        </p>
+                    </a>
+
+
+                    <a class="card" href="about.html">
+                        <span class="card-arrow">↗</span>
+
+                        <div class="card-icon">◎</div>
+
+                        <h3>About</h3>
+
+                        <p>
+                            A little more context about the person
+                            behind this website.
+                        </p>
+                    </a>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- Visual -->
+        <section class="visual-section">
+            <div class="container">
+
+                <div class="visual">
+
+                    <img
+                        src="/images/mustardscale.gif"
+                        alt="Mustard field"
+                        loading="lazy"
+                    >
+
+                    <div class="visual-overlay">
+                        <div class="visual-copy">
+                            <small>A small piece of home</small>
+
+                            <h2>Stay a while.</h2>
+
+                            <p>
+                                The website is always a work in progress.
+                                Things may change, break, disappear and
+                                occasionally come back better.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- Connect -->
+        <section class="connect" id="connect">
+            <div class="container">
+
+                <div class="connect-box">
+
+                    <div class="connect-copy">
+                        <small>Elsewhere on the internet</small>
+
+                        <h2>
+                            Let's keep in touch.
+                        </h2>
+                    </div>
+
+
+                    <div class="socials">
+
+                        <a
+                            class="social"
+                            href="https://www.instagram.com/souvikkun/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <span>Instagram</span>
+                            <span class="social-arrow">↗</span>
+                        </a>
+
+                        <a
+                            class="social"
+                            href="https://www.facebook.com/share/19tgPLvUYk/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <span>Facebook</span>
+                            <span class="social-arrow">↗</span>
+                        </a>
+
+                        <a
+                            class="social"
+                            href="https://www.youtube.com/@Souvikun"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <span>YouTube</span>
+                            <span class="social-arrow">↗</span>
+                        </a>
+
+                        <a
+                            class="social"
+                            href="https://github.com/souvikun"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <span>GitHub</span>
+                            <span class="social-arrow">↗</span>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+
+            <div class="footer-inner">
+                <span>
+                    © 2026 <strong>Souvik Das</strong>
+                </span>
+
+                <span>
+                    Made somewhere on the internet.
+                </span>
+            </div>
+
+        </div>
+    </footer>
+
 </body>
-
-<h6><sub><center>© 2025 Souvik Das. All Rights Reserved</sub></h6>
-
 </html>
- 
+```
