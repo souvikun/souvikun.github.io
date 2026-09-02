@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>FAQ — souvikkun</title>
+
+    <meta
+        name="description"
+        content="Frequently asked questions about Souvik, souvikkun and this website."
+    >
+
+    <link rel="stylesheet" href="faq.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap"
+        rel="stylesheet"
+    >
+
+    <script>
+        (() => {
+            const savedTheme = localStorage.getItem("theme");
+
+            if (savedTheme === "light" || savedTheme === "dark") {
+                document.documentElement.dataset.theme = savedTheme;
+            } else if (
+                window.matchMedia("(prefers-color-scheme: dark)").matches
+            ) {
+                document.documentElement.dataset.theme = "dark";
+            }
+        })();
+    </script>
+</head>
+
+
+<body>
+
+    <!-- ==================================================
+         BACKGROUND
+    =================================================== -->
+
+    <div class="faq-background" aria-hidden="true">
+
+        <div class="faq-grid"></div>
+
+        <div class="faq-glow faq-glow-one"></div>
+        <div class="faq-glow faq-glow-two"></div>
+
+    </div>
+
+
+    <!-- ==================================================
+         HEADER
+    =================================================== -->
+
+    <header class="faq-header">
+
+        <div class="faq-container faq-nav">
+
+            <a
+                href="index.html"
+                class="faq-logo"
+            >
+                souvikkun<span>.</span>
+            </a>
+
+
+            <nav class="faq-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="blogs.html">
+                    Blogs
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+            </nav>
+
+
+            <button
+                id="themeToggle"
+                class="faq-theme-toggle"
+                type="button"
+                aria-label="Switch to dark mode"
+                aria-pressed="false"
+            >
+                <span class="sun">☼</span>
+                <span class="moon">☾</span>
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- ==================================================
+             HERO
+        =================================================== -->
+
+        <section class="faq-hero">
+
+            <div class="faq-container">
+
+                <div class="faq-hero-meta">
+
+                    <span>
+                        SYSTEM / FAQ
+                    </span>
+
+                    <span>
+                        QUERY INTERFACE ACTIVE
+                    </span>
+
+                </div>
+
+
+                <div class="faq-hero-layout">
+
+                    <div>
+
+                        <p class="faq-eyebrow">
+                            Frequently asked questions
+                        </p>
+
+                        <h1>
+                            Curious?
+                            <br>
+                            <em>Ask away.</em>
+                        </h1>
+
+                        <p class="faq-intro">
+                            A few answers about me, this website,
+                            engineering, and whatever else seems
+                            worth explaining.
+                        </p>
+
+                    </div>
+
+
+                    <!-- Diagnostic graphic -->
+
+                    <div class="diagnostic">
+
+                        <div class="diagnostic-header">
+
+                            <span>
+                                QUERY_NODE
+                            </span>
+
+                            <span class="live">
+                                LIVE
+                            </span>
+
+                        </div>
+
+
+                        <div class="diagnostic-display">
+
+                            <div class="diagnostic-circle"></div>
+
+                            <div class="diagnostic-cross"></div>
+
+                            <span class="diagnostic-node node-a"></span>
+                            <span class="diagnostic-node node-b"></span>
+                            <span class="diagnostic-node node-c"></span>
+
+                            <span class="diagnostic-coord coord-a">
+                                X: 04.21
+                            </span>
+
+                            <span class="diagnostic-coord coord-b">
+                                Y: 17.08
+                            </span>
+
+                            <span class="diagnostic-status">
+                                READY_
+                            </span>
+
+                        </div>
+
+
+                        <div class="diagnostic-footer">
+
+                            <span>
+                                RESPONSE / OK
+                            </span>
+
+                            <span>
+                                001
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             FAQ
+        =================================================== -->
+
+        <section class="faq-section">
+
+            <div class="faq-container">
+
+                <div class="faq-section-heading">
+
+                    <span>
+                        01
+                    </span>
+
+                    <div>
+
+                        <p class="faq-eyebrow">
+                            Knowledge base
+                        </p>
+
+                        <h2>
+                            Answers to some
+                            <em>obvious questions.</em>
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="faq-layout">
+
+
+                    <!-- LEFT DECORATIVE PANEL -->
+
+                    <aside class="faq-sidebar">
+
+                        <div class="sidebar-label">
+                            FREQUENCY / 50HZ
+                        </div>
+
+
+                        <div class="sidebar-wave">
+
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+
+                        </div>
+
+
+                        <div class="sidebar-equation">
+                            V = IR
+                        </div>
+
+
+                        <div class="sidebar-status">
+
+                            <div>
+                                <span>CORE</span>
+                                <strong>01</strong>
+                            </div>
+
+                            <div>
+                                <span>STATE</span>
+                                <strong>READY</strong>
+                            </div>
+
+                            <div>
+                                <span>LOAD</span>
+                                <strong>LOW</strong>
+                            </div>
+
+                        </div>
+
+                    </aside>
+
+
+                    <!-- QUESTIONS -->
+
+                    <div class="faq-list">
+
+
+                        <!-- FAQ 01 -->
+
+                        <article class="faq-item">
+
+                            <button
+                                class="faq-question"
+                                type="button"
+                                aria-expanded="false"
+                                aria-controls="answer-01"
+                            >
+
+                                <span class="faq-number">
+                                    001
+                                </span>
+
+                                <span class="faq-question-text">
+                                    Who is Souvik?
+                                </span>
+
+                                <span class="faq-toggle">
+                                    +
+                                </span>
+
+                            </button>
+
+
+                            <div
+                                class="faq-answer"
+                                id="answer-01"
+                                hidden
+                            >
+
+                                <div class="faq-answer-inner">
+
+                                    <p>
+                                        I'm Souvik. This is my personal
+                                        corner of the internet where I
+                                        collect things I build, things
+                                        I write, and ideas I don't want
+                                        to lose.
+                                    </p>
+
+                                    <p>
+                                        Think of the site as part
+                                        portfolio, part notebook and
+                                        part experimental playground.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- FAQ 02 -->
+
+                        <article class="faq-item">
+
+                            <button
+                                class="faq-question"
+                                type="button"
+                                aria-expanded="false"
+                                aria-controls="answer-02"
+                            >
+
+                                <span class="faq-number">
+                                    002
+                                </span>
+
+                                <span class="faq-question-text">
+                                    What is souvikkun?
+                                </span>
+
+                                <span class="faq-toggle">
+                                    +
+                                </span>
+
+                            </button>
+
+
+                            <div
+                                class="faq-answer"
+                                id="answer-02"
+                                hidden
+                            >
+
+                                <div class="faq-answer-inner">
+
+                                    <p>
+                                        It's simply the name I've
+                                        chosen for this little space.
+                                        A personal identity for the
+                                        things I publish and build
+                                        online.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- FAQ 03 -->
+
+                        <article class="faq-item">
+
+                            <button
+                                class="faq-question"
+                                type="button"
+                                aria-expanded="false"
+                                aria-controls="answer-03"
+                            >
+
+                                <span class="faq-number">
+                                    003
+                                </span>
+
+                                <span class="faq-question-text">
+                                    Why electrical engineering?
+                                </span>
+
+                                <span class="faq-toggle">
+                                    +
+                                </span>
+
+                            </button>
+
+
+                            <div
+                                class="faq-answer"
+                                id="answer-03"
+                                hidden
+                            >
+
+                                <div class="faq-answer-inner">
+
+                                    <p>
+                                        Because it's one of those fields
+                                        where abstract mathematics can
+                                        eventually become something
+                                        physical.
+                                    </p>
+
+                                    <div class="faq-equation">
+                                        SIGNAL → SYSTEM → MEASUREMENT
+                                    </div>
+
+                                    <p>
+                                        You can calculate something,
+                                        build it, measure what actually
+                                        happened, and then figure out
+                                        why reality disagreed with your
+                                        first calculation.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- FAQ 04 -->
+
+                        <article class="faq-item">
+
+                            <button
+                                class="faq-question"
+                                type="button"
+                                aria-expanded="false"
+                                aria-controls="answer-04"
+                            >
+
+                                <span class="faq-number">
+                                    004
+                                </span>
+
+                                <span class="faq-question-text">
+                                    What can I find on this website?
+                                </span>
+
+                                <span class="faq-toggle">
+                                    +
+                                </span>
+
+                            </button>
+
+
+                            <div
+                                class="faq-answer"
+                                id="answer-04"
+                                hidden
+                            >
+
+                                <div class="faq-answer-inner">
+
+                                    <p>
+                                        There are blog posts,
+                                        engineering notes, personal
+                                        information and experiments.
+                                    </p>
+
+                                    <p>
+                                        More sections will appear as I
+                                        have things worth putting here.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- FAQ 05 -->
+
+                        <article class="faq-item">
+
+                            <button
+                                class="faq-question"
+                                type="button"
+                                aria-expanded="false"
+                                aria-controls="answer-05"
+                            >
+
+                                <span class="faq-number">
+                                    005
+                                </span>
+
+                                <span class="faq-question-text">
+                                    Can I contact you?
+                                </span>
+
+                                <span class="faq-toggle">
+                                    +
+                                </span>
+
+                            </button>
+
+
+                            <div
+                                class="faq-answer"
+                                id="answer-05"
+                                hidden
+                            >
+
+                                <div class="faq-answer-inner">
+
+                                    <p>
+                                        Yes. The easiest way is through
+                                        one of the social links on the
+                                        homepage.
+                                    </p>
+
+                                    <a
+                                        class="faq-answer-link"
+                                        href="index.html#connect"
+                                    >
+                                        Open contact links ↗
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- FAQ 06 -->
+
+                        <article class="faq-item">
+
+                            <button
+                                class="faq-question"
+                                type="button"
+                                aria-expanded="false"
+                                aria-controls="answer-06"
+                            >
+
+                                <span class="faq-number">
+                                    006
+                                </span>
+
+                                <span class="faq-question-text">
+                                    Why does the website look like this?
+                                </span>
+
+                                <span class="faq-toggle">
+                                    +
+                                </span>
+
+                            </button>
+
+
+                            <div
+                                class="faq-answer"
+                                id="answer-06"
+                                hidden
+                            >
+
+                                <div class="faq-answer-inner">
+
+                                    <p>
+                                        Because a personal website
+                                        doesn't have to look like a
+                                        résumé.
+                                    </p>
+
+                                    <p>
+                                        I wanted it to feel somewhere
+                                        between a notebook, an
+                                        engineering console and an
+                                        abstract digital space.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             TERMINAL SECTION
+        =================================================== -->
+
+        <section class="faq-terminal">
+
+            <div class="faq-container">
+
+                <div class="terminal">
+
+                    <div class="terminal-top">
+
+                        <span>
+                            SOUVIKKUN / QUERY TERMINAL
+                        </span>
+
+                        <span>
+                            006 / 006
+                        </span>
+
+                    </div>
+
+
+                    <div class="terminal-body">
+
+                        <span class="terminal-prompt">
+                            $
+                        </span>
+
+                        <span class="terminal-text">
+                            system.ready()
+                        </span>
+
+                        <span class="terminal-cursor"></span>
+
+                    </div>
+
+
+                    <div class="terminal-message">
+                        Curiosity detected. Keep exploring.
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- ==================================================
+         FOOTER
+    =================================================== -->
+
+    <footer class="faq-footer">
+
+        <div class="faq-container">
+
+            <span>
+                © 2026 Souvik Das
+            </span>
+
+            <a href="index.html">
+                Return home ↑
+            </a>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ==================================================
+         JAVASCRIPT
+    =================================================== -->
+
+    <script>
+
+        /* Theme */
+
+        const root =
+            document.documentElement;
+
+        const themeToggle =
+            document.getElementById(
+                "themeToggle"
+            );
+
+
+        function updateThemeButton() {
+
+            const dark =
+                root.dataset.theme === "dark";
+
+            themeToggle.setAttribute(
+                "aria-pressed",
+                String(dark)
+            );
+
+            themeToggle.setAttribute(
+                "aria-label",
+                dark
+                    ? "Switch to light mode"
+                    : "Switch to dark mode"
+            );
+        }
+
+
+        themeToggle.addEventListener(
+            "click",
+            () => {
+
+                const nextTheme =
+                    root.dataset.theme === "dark"
+                        ? "light"
+                        : "dark";
+
+                root.dataset.theme =
+                    nextTheme;
+
+                localStorage.setItem(
+                    "theme",
+                    nextTheme
+                );
+
+                updateThemeButton();
+            }
+        );
+
+
+        updateThemeButton();
+
+
+        /* FAQ */
+
+        const faqQuestions =
+            document.querySelectorAll(
+                ".faq-question"
+            );
+
+
+        faqQuestions.forEach(question => {
+
+            question.addEventListener(
+                "click",
+                () => {
+
+                    const answerId =
+                        question.getAttribute(
+                            "aria-controls"
+                        );
+
+                    const answer =
+                        document.getElementById(
+                            answerId
+                        );
+
+                    const item =
+                        question.closest(
+                            ".faq-item"
+                        );
+
+                    const isOpen =
+                        question.getAttribute(
+                            "aria-expanded"
+                        ) === "true";
+
+
+                    /*
+                     * Close currently open FAQ
+                     * if one exists.
+                     */
+
+                    document
+                        .querySelectorAll(
+                            ".faq-question[aria-expanded='true']"
+                        )
+                        .forEach(openQuestion => {
+
+                            if (
+                                openQuestion !== question
+                            ) {
+
+                                const openId =
+                                    openQuestion.getAttribute(
+                                        "aria-controls"
+                                    );
+
+                                const openAnswer =
+                                    document.getElementById(
+                                        openId
+                                    );
+
+                                const openItem =
+                                    openQuestion.closest(
+                                        ".faq-item"
+                                    );
+
+
+                                openQuestion.setAttribute(
+                                    "aria-expanded",
+                                    "false"
+                                );
+
+                                openItem.classList.remove(
+                                    "is-open"
+                                );
+
+                                openQuestion
+                                    .querySelector(
+                                        ".faq-toggle"
+                                    )
+                                    .textContent =
+                                    "+";
+
+                                setTimeout(
+                                    () => {
+                                        openAnswer.hidden =
+                                            true;
+                                    },
+                                    350
+                                );
+                            }
+
+                        });
+
+
+                    /* Close current */
+
+                    if (isOpen) {
+
+                        question.setAttribute(
+                            "aria-expanded",
+                            "false"
+                        );
+
+                        item.classList.remove(
+                            "is-open"
+                        );
+
+                        question
+                            .querySelector(
+                                ".faq-toggle"
+                            )
+                            .textContent =
+                            "+";
+
+                        setTimeout(
+                            () => {
+                                answer.hidden =
+                                    true;
+                            },
+                            350
+                        );
+
+                        return;
+                    }
+
+
+                    /* Open current */
+
+                    answer.hidden =
+                        false;
+
+                    question.setAttribute(
+                        "aria-expanded",
+                        "true"
+                    );
+
+                    item.classList.add(
+                        "is-open"
+                    );
+
+                    question
+                        .querySelector(
+                            ".faq-toggle"
+                        )
+                        .textContent =
+                        "−";
+
+                }
+            );
+
+        });
+
+    </script>
+
+</body>
+
+</html>

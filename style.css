@@ -1422,3 +1422,1193 @@ button {
             0.01ms !important;
     }
 }
+/* =========================================================
+   ABSTRACT CIRCUIT MAP
+   ========================================================= */
+
+.abstract-section {
+    padding:
+        20px
+        0
+        130px;
+}
+
+
+.abstract-card {
+    position: relative;
+
+    height: 540px;
+
+    overflow: hidden;
+
+    border:
+        1px solid var(--line);
+
+    background:
+        radial-gradient(
+            circle at 50% 50%,
+            rgba(201,255,74,.13),
+            transparent 26%
+        ),
+        var(--card);
+
+    isolation: isolate;
+}
+
+
+/* ---------------------------------------------------------
+   GRID
+--------------------------------------------------------- */
+
+.abstract-grid {
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            var(--line-soft) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            var(--line-soft) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        45px 45px;
+
+    opacity: .75;
+
+    mask-image:
+        radial-gradient(
+            circle at center,
+            black 0%,
+            transparent 82%
+        );
+
+    -webkit-mask-image:
+        radial-gradient(
+            circle at center,
+            black 0%,
+            transparent 82%
+        );
+}
+
+
+/* ---------------------------------------------------------
+   ABSTRACT CIRCLES
+--------------------------------------------------------- */
+
+.abstract-circle {
+    position: absolute;
+
+    border:
+        1px solid var(--line);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    animation:
+        abstract-float
+        9s
+        ease-in-out
+        infinite;
+}
+
+
+.circle-1 {
+
+    width:
+        370px;
+
+    height:
+        370px;
+
+    top:
+        85px;
+
+    left:
+        calc(50% - 185px);
+
+    background:
+        radial-gradient(
+            circle at 40% 35%,
+            rgba(201,255,74,.55),
+            rgba(201,255,74,.05) 48%,
+            transparent 70%
+        );
+
+    backdrop-filter:
+        blur(8px);
+}
+
+
+.circle-2 {
+
+    width:
+        210px;
+
+    height:
+        210px;
+
+    top:
+        165px;
+
+    left:
+        calc(50% - 105px);
+
+    animation-delay:
+        -2s;
+}
+
+
+.circle-3 {
+
+    width:
+        560px;
+
+    height:
+        560px;
+
+    top:
+        -10px;
+
+    left:
+        calc(50% - 280px);
+
+    border-style:
+        dashed;
+
+    opacity:
+        .3;
+
+    animation-duration:
+        16s;
+}
+
+
+/* ---------------------------------------------------------
+   CENTRAL CORE
+--------------------------------------------------------- */
+
+.abstract-core {
+
+    position: absolute;
+
+    z-index: 8;
+
+    width:
+        150px;
+
+    height:
+        150px;
+
+    top:
+        50%;
+
+    left:
+        50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    border:
+        1px solid
+        rgba(201,255,74,.45);
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(10,12,10,.12);
+
+    box-shadow:
+        0 0 50px
+        rgba(201,255,74,.08);
+
+    backdrop-filter:
+        blur(8px);
+}
+
+
+.core-ring {
+
+    position:
+        absolute;
+
+    inset:
+        12px;
+
+    border:
+        1px dashed
+        var(--line);
+
+    border-radius:
+        50%;
+
+    animation:
+        core-spin
+        14s
+        linear
+        infinite;
+}
+
+
+.core-marker {
+
+    width:
+        34px;
+
+    height:
+        34px;
+
+    border:
+        1px solid
+        var(--accent);
+
+    background:
+        var(--text);
+
+    box-shadow:
+        8px 8px 0
+        var(--accent);
+
+    transform:
+        rotate(45deg);
+}
+
+
+.core-text {
+
+    position:
+        absolute;
+
+    top:
+        50%;
+
+    left:
+        50%;
+
+    transform:
+        translate(-50%, 34px);
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    gap:
+        2px;
+
+    font-family:
+        "JetBrains Mono",
+        monospace;
+
+    white-space:
+        nowrap;
+}
+
+
+.core-text small {
+
+    color:
+        var(--muted);
+
+    font-size:
+        6px;
+
+    letter-spacing:
+        .15em;
+}
+
+
+.core-text strong {
+
+    color:
+        var(--text);
+
+    font-size:
+        8px;
+
+    letter-spacing:
+        .1em;
+}
+
+
+@keyframes core-spin {
+
+    from {
+        transform:
+            rotate(0);
+    }
+
+    to {
+        transform:
+            rotate(360deg);
+    }
+}
+
+
+/* ---------------------------------------------------------
+   CIRCUIT LINKS
+--------------------------------------------------------- */
+
+.circuit-link {
+
+    position:
+        absolute;
+
+    z-index:
+        9;
+
+    width:
+        430px;
+
+    height:
+        170px;
+
+    display:
+        block;
+
+    transition:
+        transform .35s ease;
+}
+
+
+.circuit-link:hover {
+
+    transform:
+        translateY(-5px);
+}
+
+
+/* BLOGS */
+
+.circuit-link-blogs {
+
+    left:
+        20px;
+
+    top:
+        115px;
+}
+
+
+/* FAQ */
+
+.circuit-link-faq {
+
+    right:
+        20px;
+
+    bottom:
+        100px;
+}
+
+
+/* ---------------------------------------------------------
+   TRACE
+--------------------------------------------------------- */
+
+.circuit-trace {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+}
+
+
+/* Individual trace sections */
+
+.trace-segment {
+
+    position:
+        absolute;
+
+    height:
+        1px;
+
+    background:
+        var(--accent);
+
+    box-shadow:
+        0 0 9px
+        rgba(201,255,74,.35);
+
+    opacity:
+        .55;
+}
+
+
+/* Start horizontal */
+
+.circuit-link-blogs .segment-a {
+
+    width:
+        150px;
+
+    top:
+        90px;
+
+    left:
+        0;
+}
+
+
+/* Blog vertical */
+
+.circuit-link-blogs .segment-b {
+
+    width:
+        1px;
+
+    height:
+        70px;
+
+    top:
+        20px;
+
+    left:
+        150px;
+
+    background:
+        var(--accent);
+}
+
+
+.circuit-link-blogs .segment-c {
+
+    width:
+        100px;
+
+    top:
+        20px;
+
+    left:
+        150px;
+
+    background:
+        var(--accent);
+}
+
+
+/* FAQ */
+
+.circuit-link-faq .segment-a {
+
+    width:
+        150px;
+
+    top:
+        80px;
+
+    right:
+        0;
+}
+
+
+.circuit-link-faq .segment-b {
+
+    width:
+        1px;
+
+    height:
+        65px;
+
+    top:
+        80px;
+
+    right:
+        150px;
+}
+
+
+.circuit-link-faq .segment-c {
+
+    width:
+        100px;
+
+    top:
+        145px;
+
+    right:
+        150px;
+}
+
+
+/* ---------------------------------------------------------
+   CIRCUIT NODES
+--------------------------------------------------------- */
+
+.circuit-node {
+
+    position:
+        absolute;
+
+    width:
+        9px;
+
+    height:
+        9px;
+
+    border:
+        1px solid
+        var(--accent);
+
+    border-radius:
+        50%;
+
+    background:
+        var(--background);
+
+    box-shadow:
+        0 0 10px
+        rgba(201,255,74,.6);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+
+.circuit-link:hover
+.circuit-node {
+
+    transform:
+        scale(1.45);
+
+    box-shadow:
+        0 0 20px
+        rgba(201,255,74,.95);
+}
+
+
+/* Blog node positions */
+
+.circuit-link-blogs .node-start {
+
+    left:
+        0;
+
+    top:
+        85px;
+}
+
+
+.circuit-link-blogs .node-mid {
+
+    left:
+        145px;
+
+    top:
+        15px;
+}
+
+
+.circuit-link-blogs .node-end {
+
+    left:
+        245px;
+
+    top:
+        15px;
+}
+
+
+/* FAQ node positions */
+
+.circuit-link-faq .node-start {
+
+    right:
+        0;
+
+    top:
+        75px;
+}
+
+
+.circuit-link-faq .node-mid {
+
+    right:
+        145px;
+
+    top:
+        75px;
+}
+
+
+.circuit-link-faq .node-end {
+
+    right:
+        245px;
+
+    top:
+        140px;
+}
+
+
+/* ---------------------------------------------------------
+   MOVING PULSE
+--------------------------------------------------------- */
+
+.circuit-pulse {
+
+    position:
+        absolute;
+
+    width:
+        7px;
+
+    height:
+        7px;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--accent);
+
+    box-shadow:
+        0 0 14px
+        var(--accent);
+
+    animation:
+        circuit-pulse
+        3s
+        linear
+        infinite;
+}
+
+
+/* Blogs pulse */
+
+.circuit-link-blogs .circuit-pulse {
+
+    left:
+        0;
+
+    top:
+        86px;
+}
+
+
+/* FAQ pulse */
+
+.circuit-link-faq .circuit-pulse {
+
+    right:
+        0;
+
+    top:
+        76px;
+
+    animation-delay:
+        -1.5s;
+}
+
+
+@keyframes circuit-pulse {
+
+    0% {
+        opacity:
+            0;
+
+        transform:
+            translateX(0)
+            scale(.7);
+    }
+
+    10% {
+        opacity:
+            1;
+    }
+
+    45% {
+        transform:
+            translateX(145px)
+            scale(1);
+    }
+
+    60% {
+        transform:
+            translateX(145px)
+            translateY(-70px);
+    }
+
+    90% {
+        opacity:
+            1;
+    }
+
+    100% {
+        opacity:
+            0;
+
+        transform:
+            translateX(245px)
+            translateY(-70px);
+    }
+}
+
+
+/* ---------------------------------------------------------
+   CIRCUIT LABELS
+--------------------------------------------------------- */
+
+.circuit-label {
+
+    position:
+        absolute;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        5px;
+
+    padding:
+        13px 16px;
+
+    border:
+        1px solid
+        var(--line);
+
+    background:
+        var(--card);
+
+    backdrop-filter:
+        blur(8px);
+
+    transition:
+        border-color .3s ease,
+        background-color .3s ease;
+}
+
+
+.circuit-label small {
+
+    color:
+        var(--muted);
+
+    font-family:
+        "JetBrains Mono",
+        monospace;
+
+    font-size:
+        7px;
+
+    letter-spacing:
+        .15em;
+}
+
+
+.circuit-label strong {
+
+    color:
+        var(--text);
+
+    font-family:
+        "JetBrains Mono",
+        monospace;
+
+    font-size:
+        12px;
+
+    letter-spacing:
+        .04em;
+}
+
+
+/* Blog label */
+
+.circuit-link-blogs .circuit-label {
+
+    left:
+        10px;
+
+    bottom:
+        0;
+}
+
+
+/* FAQ label */
+
+.circuit-link-faq .circuit-label {
+
+    right:
+        10px;
+
+    top:
+        0;
+}
+
+
+.circuit-link:hover
+.circuit-label {
+
+    border-color:
+        rgba(201,255,74,.5);
+
+    background:
+        var(--card-hover);
+}
+
+
+/* ---------------------------------------------------------
+   TECH MARKERS
+--------------------------------------------------------- */
+
+.tech-marker {
+
+    position:
+        absolute;
+
+    z-index:
+        10;
+
+    color:
+        var(--muted);
+
+    font-family:
+        "JetBrains Mono",
+        monospace;
+
+    font-size:
+        7px;
+
+    letter-spacing:
+        .12em;
+}
+
+
+.marker-1 {
+
+    top:
+        38%;
+
+    left:
+        41%;
+}
+
+
+.marker-2 {
+
+    top:
+        63%;
+
+    left:
+        52%;
+}
+
+
+.marker-3 {
+
+    bottom:
+        18%;
+
+    left:
+        44%;
+}
+
+
+/* ---------------------------------------------------------
+   LABELS
+--------------------------------------------------------- */
+
+.abstract-label {
+
+    position:
+        absolute;
+
+    z-index:
+        12;
+
+    color:
+        var(--muted);
+
+    font-family:
+        "JetBrains Mono",
+        monospace;
+
+    font-size:
+        8px;
+
+    letter-spacing:
+        .15em;
+}
+
+
+.label-top {
+
+    top:
+        27px;
+
+    left:
+        30px;
+}
+
+
+.label-bottom {
+
+    right:
+        30px;
+
+    bottom:
+        27px;
+}
+
+
+/* ---------------------------------------------------------
+   DARK MODE ENHANCEMENT
+--------------------------------------------------------- */
+
+:root[data-theme="dark"]
+.abstract-card {
+
+    background:
+        radial-gradient(
+            circle at 50% 50%,
+            rgba(201,255,74,.10),
+            transparent 27%
+        ),
+        rgba(255,255,255,.02);
+}
+
+
+:root[data-theme="dark"]
+.abstract-circle.circle-1 {
+
+    box-shadow:
+        0 0 80px
+        rgba(201,255,74,.06);
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE
+--------------------------------------------------------- */
+
+@media (max-width: 700px) {
+
+    .abstract-card {
+
+        height:
+            420px;
+    }
+
+
+    .circle-1 {
+
+        width:
+            270px;
+
+        height:
+            270px;
+
+        left:
+            calc(50% - 135px);
+
+        top:
+            75px;
+    }
+
+
+    .circle-2 {
+
+        width:
+            155px;
+
+        height:
+            155px;
+
+        left:
+            calc(50% - 77px);
+
+        top:
+            132px;
+    }
+
+
+    .circle-3 {
+
+        width:
+            400px;
+
+        height:
+            400px;
+
+        left:
+            calc(50% - 200px);
+
+        top:
+            10px;
+    }
+
+
+    .abstract-core {
+
+        width:
+            115px;
+
+        height:
+            115px;
+    }
+
+
+    .core-marker {
+
+        width:
+            26px;
+
+        height:
+            26px;
+    }
+
+
+    .circuit-link {
+
+        width:
+            210px;
+
+        height:
+            110px;
+    }
+
+
+    .circuit-link-blogs {
+
+        left:
+            -10px;
+
+        top:
+            45px;
+    }
+
+
+    .circuit-link-faq {
+
+        right:
+            -10px;
+
+        bottom:
+            45px;
+    }
+
+
+    .circuit-link-blogs .segment-a {
+        width:
+            80px;
+    }
+
+
+    .circuit-link-blogs .segment-b {
+        left:
+            80px;
+    }
+
+
+    .circuit-link-blogs .segment-c {
+        left:
+            80px;
+
+        width:
+            65px;
+    }
+
+
+    .circuit-link-faq .segment-a {
+        width:
+            80px;
+    }
+
+
+    .circuit-link-faq .segment-b {
+        right:
+            80px;
+    }
+
+
+    .circuit-link-faq .segment-c {
+        right:
+            80px;
+
+        width:
+            65px;
+    }
+
+
+    .circuit-link-blogs .node-mid {
+        left:
+            75px;
+    }
+
+
+    .circuit-link-blogs .node-end {
+        left:
+            140px;
+    }
+
+
+    .circuit-link-faq .node-mid {
+        right:
+            75px;
+    }
+
+
+    .circuit-link-faq .node-end {
+        right:
+            140px;
+    }
+
+
+    .circuit-link-blogs .circuit-label {
+
+        left:
+            0;
+
+        bottom:
+            0;
+    }
+
+
+    .circuit-link-faq .circuit-label {
+
+        right:
+            0;
+
+        top:
+            0;
+    }
+
+
+    .tech-marker {
+        display:
+            none;
+    }
+
+
+    .label-top,
+    .label-bottom {
+
+        font-size:
+            7px;
+    }
+}

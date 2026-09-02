@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>About — souvikkun</title>
+
+    <meta
+        name="description"
+        content="About Souvik — electrical engineering, projects, writing and experiments."
+    >
+
+    <link rel="stylesheet" href="about.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap"
+        rel="stylesheet"
+    >
+
+    <script>
+        (() => {
+
+            const savedTheme =
+                localStorage.getItem("theme");
+
+            if (
+                savedTheme === "light" ||
+                savedTheme === "dark"
+            ) {
+
+                document.documentElement.dataset.theme =
+                    savedTheme;
+
+            } else if (
+                window.matchMedia &&
+                window.matchMedia(
+                    "(prefers-color-scheme: dark)"
+                ).matches
+            ) {
+
+                document.documentElement.dataset.theme =
+                    "dark";
+            }
+
+        })();
+    </script>
+</head>
+
+
+<body>
+
+
+    <!-- ==================================================
+         BACKGROUND
+    =================================================== -->
+
+    <div
+        class="about-background"
+        aria-hidden="true"
+    >
+
+        <div class="about-grid"></div>
+
+        <div class="about-glow glow-one"></div>
+        <div class="about-glow glow-two"></div>
+        <div class="about-glow glow-three"></div>
+
+    </div>
+
+
+    <!-- ==================================================
+         HEADER
+    =================================================== -->
+
+    <header class="about-header">
+
+        <div class="about-container about-nav">
+
+            <a
+                href="index.html"
+                class="about-logo"
+            >
+                souvikkun<span>.</span>
+            </a>
+
+
+            <nav
+                class="about-links"
+                aria-label="Main navigation"
+            >
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="blogs.html">
+                    Blogs
+                </a>
+
+                <a href="faq.html">
+                    FAQ
+                </a>
+
+            </nav>
+
+
+            <button
+                id="themeToggle"
+                class="about-theme-toggle"
+                type="button"
+                aria-label="Switch to dark mode"
+                aria-pressed="false"
+            >
+
+                <span class="sun">
+                    ☼
+                </span>
+
+                <span class="moon">
+                    ☾
+                </span>
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- ==================================================
+             HERO
+        =================================================== -->
+
+        <section class="about-hero">
+
+            <div class="about-container">
+
+                <div class="about-hero-meta">
+
+                    <span>
+                        PROFILE / 001
+                    </span>
+
+                    <span>
+                        IDENTITY NODE ACTIVE
+                    </span>
+
+                </div>
+
+
+                <div class="about-hero-grid">
+
+
+                    <!-- Text -->
+
+                    <div class="about-hero-copy">
+
+                        <p class="about-eyebrow">
+                            About me
+                        </p>
+
+                        <h1>
+                            A person
+                            <br>
+                            behind the
+                            <em>circuits.</em>
+                        </h1>
+
+                        <p class="about-lead">
+                            I'm Souvik — an electrical engineering
+                            enthusiast, maker, writer, and generally
+                            curious person trying to understand how
+                            things work.
+                        </p>
+
+                    </div>
+
+
+                    <!-- Identity graphic -->
+
+                    <div class="identity-graphic">
+
+
+                        <div class="identity-header">
+
+                            <span>
+                                IDENTITY_CORE
+                            </span>
+
+                            <span>
+                                001
+                            </span>
+
+                        </div>
+
+
+                        <div class="identity-stage">
+
+                            <div class="identity-orbit orbit-outer"></div>
+
+                            <div class="identity-orbit orbit-middle"></div>
+
+                            <div class="identity-orbit orbit-inner"></div>
+
+
+                            <!-- Circuit paths -->
+
+                            <div class="identity-path path-one"></div>
+                            <div class="identity-path path-two"></div>
+                            <div class="identity-path path-three"></div>
+                            <div class="identity-path path-four"></div>
+
+
+                            <!-- Nodes -->
+
+                            <span class="identity-node node-one"></span>
+                            <span class="identity-node node-two"></span>
+                            <span class="identity-node node-three"></span>
+                            <span class="identity-node node-four"></span>
+
+
+                            <!-- Center -->
+
+                            <div class="identity-core">
+
+                                <div class="core-symbol">
+                                    ∿
+                                </div>
+
+                                <span>
+                                    SOUVIK
+                                </span>
+
+                            </div>
+
+
+                            <span class="identity-label label-top">
+                                HUMAN / 01
+                            </span>
+
+                            <span class="identity-label label-left">
+                                CURIOUS
+                            </span>
+
+                            <span class="identity-label label-right">
+                                MAKER
+                            </span>
+
+                            <span class="identity-label label-bottom">
+                                ENGINEER
+                            </span>
+
+                        </div>
+
+
+                        <div class="identity-footer">
+
+                            <span>
+                                X: 04.21
+                            </span>
+
+                            <span>
+                                Y: 17.08
+                            </span>
+
+                            <span>
+                                STATUS: ACTIVE
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             INTRODUCTION
+        =================================================== -->
+
+        <section class="about-introduction">
+
+            <div class="about-container">
+
+                <div class="section-marker">
+                    01
+                </div>
+
+
+                <div class="introduction-layout">
+
+                    <div class="introduction-label">
+                        A little context
+                    </div>
+
+
+                    <div class="introduction-text">
+
+                        <p class="large-copy">
+                            I like understanding things by taking them
+                            apart, looking at the pieces, and trying to
+                            put them back together in a way that makes
+                            sense to me.
+                        </p>
+
+                        <p>
+                            Electrical engineering is particularly
+                            interesting because it lives in the space
+                            between mathematics and physical reality.
+                            A diagram can become a circuit. An equation
+                            can become a measurement. An idea can become
+                            a machine.
+                        </p>
+
+                        <p>
+                            This website is an extension of that same
+                            curiosity — a place to keep notes, write
+                            about interesting ideas, and experiment with
+                            things that probably didn't need to exist.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             INTERESTS
+        =================================================== -->
+
+        <section class="interests">
+
+            <div class="about-container">
+
+
+                <div class="section-heading">
+
+                    <span>
+                        02
+                    </span>
+
+                    <div>
+
+                        <p class="about-eyebrow">
+                            Things I gravitate toward
+                        </p>
+
+                        <h2>
+                            A few
+                            <em>frequencies.</em>
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="interest-grid">
+
+
+                    <!-- Card -->
+
+                    <article class="interest-card">
+
+                        <span class="interest-number">
+                            01
+                        </span>
+
+                        <div class="interest-icon circuit-icon">
+
+                            <i></i>
+                            <i></i>
+                            <i></i>
+
+                        </div>
+
+                        <h3>
+                            Circuits
+                        </h3>
+
+                        <p>
+                            Analog systems, digital logic,
+                            measurement and the satisfying moment
+                            when a circuit finally behaves.
+                        </p>
+
+                    </article>
+
+
+                    <!-- Card -->
+
+                    <article class="interest-card">
+
+                        <span class="interest-number">
+                            02
+                        </span>
+
+                        <div class="interest-icon signal-icon">
+
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+
+                        </div>
+
+                        <h3>
+                            Signals
+                        </h3>
+
+                        <p>
+                            Waves, noise, frequency, information
+                            and all the interesting things that happen
+                            between input and output.
+                        </p>
+
+                    </article>
+
+
+                    <!-- Card -->
+
+                    <article class="interest-card">
+
+                        <span class="interest-number">
+                            03
+                        </span>
+
+                        <div class="interest-icon build-icon">
+
+                            <i></i>
+
+                        </div>
+
+                        <h3>
+                            Building
+                        </h3>
+
+                        <p>
+                            Small experiments, software,
+                            hardware and projects made mostly
+                            because I wanted to know whether I could.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             WORKFLOW
+        =================================================== -->
+
+        <section class="workflow">
+
+            <div class="about-container">
+
+
+                <div class="workflow-board">
+
+
+                    <div class="workflow-header">
+
+                        <span>
+                            ENGINEERING_PROCESS / 004
+                        </span>
+
+                        <span>
+                            LOOP ACTIVE
+                        </span>
+
+                    </div>
+
+
+                    <div class="workflow-title">
+
+                        <p>
+                            My favourite
+                            <em>loop.</em>
+                        </p>
+
+                    </div>
+
+
+                    <div class="workflow-path">
+
+
+                        <div class="workflow-step step-one">
+
+                            <span>
+                                01
+                            </span>
+
+                            <strong>
+                                THINK
+                            </strong>
+
+                            <small>
+                                define the problem
+                            </small>
+
+                        </div>
+
+
+                        <div class="workflow-connector"></div>
+
+
+                        <div class="workflow-step step-two">
+
+                            <span>
+                                02
+                            </span>
+
+                            <strong>
+                                BUILD
+                            </strong>
+
+                            <small>
+                                make something
+                            </small>
+
+                        </div>
+
+
+                        <div class="workflow-connector"></div>
+
+
+                        <div class="workflow-step step-three">
+
+                            <span>
+                                03
+                            </span>
+
+                            <strong>
+                                MEASURE
+                            </strong>
+
+                            <small>
+                                see what happened
+                            </small>
+
+                        </div>
+
+
+                        <div class="workflow-connector"></div>
+
+
+                        <div class="workflow-step step-four">
+
+                            <span>
+                                04
+                            </span>
+
+                            <strong>
+                                DEBUG
+                            </strong>
+
+                            <small>
+                                learn why it broke
+                            </small>
+
+                        </div>
+
+
+                        <div class="workflow-connector loop-connector"></div>
+
+                    </div>
+
+
+                    <div class="workflow-bottom">
+
+                        <span>
+                            ERROR IS DATA
+                        </span>
+
+                        <span>
+                            ITERATE →
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             PERSONAL PRINCIPLES
+        =================================================== -->
+
+        <section class="principles">
+
+            <div class="about-container">
+
+                <div class="section-marker">
+                    03
+                </div>
+
+
+                <div class="principles-layout">
+
+                    <div>
+
+                        <p class="about-eyebrow">
+                            Personal principles
+                        </p>
+
+                        <h2>
+                            Keep
+                            <em>looking.</em>
+                        </h2>
+
+                    </div>
+
+
+                    <div class="principle-list">
+
+                        <div class="principle">
+
+                            <span>
+                                01
+                            </span>
+
+                            <p>
+                                Don't stop at knowing
+                                <em>what</em> works.
+                                Understand why.
+                            </p>
+
+                        </div>
+
+
+                        <div class="principle">
+
+                            <span>
+                                02
+                            </span>
+
+                            <p>
+                                Make small things.
+                                Small things teach quickly.
+                            </p>
+
+                        </div>
+
+
+                        <div class="principle">
+
+                            <span>
+                                03
+                            </span>
+
+                            <p>
+                                Curiosity is usually a
+                                better starting point than
+                                certainty.
+                            </p>
+
+                        </div>
+
+
+                        <div class="principle">
+
+                            <span>
+                                04
+                            </span>
+
+                            <p>
+                                Leave enough room for
+                                something unexpected.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             SYSTEM PANEL
+        =================================================== -->
+
+        <section class="about-system">
+
+            <div class="about-container">
+
+                <div class="system-panel">
+
+                    <div class="system-top">
+
+                        <span>
+                            SOUVIKKUN / PERSONAL_SYSTEM
+                        </span>
+
+                        <span>
+                            004 / 004
+                        </span>
+
+                    </div>
+
+
+                    <div class="system-body">
+
+                        <div class="system-equation">
+                            curiosity + <span>time</span>
+                            = ?
+                        </div>
+
+
+                        <div class="system-status">
+
+                            <div>
+                                <span>
+                                    MODE
+                                </span>
+
+                                <strong>
+                                    EXPLORING
+                                </strong>
+                            </div>
+
+                            <div>
+                                <span>
+                                    SIGNAL
+                                </span>
+
+                                <strong>
+                                    STABLE
+                                </strong>
+                            </div>
+
+                            <div>
+                                <span>
+                                    NEXT
+                                </span>
+
+                                <strong>
+                                    BUILD
+                                </strong>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="system-bottom">
+
+                        <span>
+                            END OF PROFILE
+                        </span>
+
+                        <a href="index.html">
+                            RETURN HOME ↗
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==================================================
+         FOOTER
+    =================================================== -->
+
+    <footer class="about-footer">
+
+        <div class="about-container">
+
+            <span>
+                © 2026 Souvik Das
+            </span>
+
+            <span>
+                souvikkun
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ==================================================
+         JAVASCRIPT
+    =================================================== -->
+
+    <script>
+
+        const root =
+            document.documentElement;
+
+        const themeToggle =
+            document.getElementById(
+                "themeToggle"
+            );
+
+
+        function updateThemeButton() {
+
+            const dark =
+                root.dataset.theme === "dark";
+
+            themeToggle.setAttribute(
+                "aria-pressed",
+                String(dark)
+            );
+
+            themeToggle.setAttribute(
+                "aria-label",
+                dark
+                    ? "Switch to light mode"
+                    : "Switch to dark mode"
+            );
+
+        }
+
+
+        themeToggle.addEventListener(
+            "click",
+            () => {
+
+                const nextTheme =
+                    root.dataset.theme === "dark"
+                        ? "light"
+                        : "dark";
+
+                root.dataset.theme =
+                    nextTheme;
+
+                localStorage.setItem(
+                    "theme",
+                    nextTheme
+                );
+
+                updateThemeButton();
+
+            }
+        );
+
+
+        updateThemeButton();
+
+    </script>
+
+</body>
+
+</html>
